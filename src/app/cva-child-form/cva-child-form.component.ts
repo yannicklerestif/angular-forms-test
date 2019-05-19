@@ -12,22 +12,22 @@ import {
 } from '@angular/forms';
 import { ReturnStatement } from '@angular/compiler';
 @Component({
-  selector: 'app-child-form',
-  templateUrl: './child-form.component.html',
+  selector: 'app-cva-child-form',
+  templateUrl: './cva-child-form.component.html',
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => ChildFormComponent),
+      useExisting: forwardRef(() => CvaChildFormComponent),
       multi: true
     },
     {
       provide: NG_VALIDATORS,
-      useExisting: forwardRef(() => ChildFormComponent),
+      useExisting: forwardRef(() => CvaChildFormComponent),
       multi: true
     }
   ]
 })
-export class ChildFormComponent implements OnInit, ControlValueAccessor, Validator {
+export class CvaChildFormComponent implements OnInit, ControlValueAccessor, Validator {
   childForm: FormGroup;
 
   constructor() {

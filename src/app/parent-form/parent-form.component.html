@@ -1,1 +1,4 @@
-<app-child-form formControlName="child"></app-child-form>
+<h1>This is the 'Simple Nesting' parent form</h1>
+<ng-container [formGroup]="parentForm">
+    <app-cva-child-form formControlName="child"></app-cva-child-form>
+</ng-container>

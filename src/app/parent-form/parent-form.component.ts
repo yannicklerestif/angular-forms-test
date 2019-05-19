@@ -12,14 +12,14 @@ import { FormGroup, FormControl, FormBuilder, ControlContainer, FormGroupDirecti
   ],
 })
 export class ParentFormComponent implements OnInit {
-  parentFormGroup: FormGroup;
+  parentForm: FormGroup;
 
-  constructor(private parent: FormGroupDirective) { };
+  constructor(private fb: FormBuilder, private grandParent: FormGroupDirective) { };
 
   ngOnInit() {
-    this.parent.form.addControl(
-      'child', new FormControl({name: '', comment: ''})
-    );
+    this.parentForm = new FormGroup({ child: new FormControl('')});
+    this.grandParent.form.addControl( 'parent' , this.parentForm );
+    console.log(this.grandParent);
   }
 
 }

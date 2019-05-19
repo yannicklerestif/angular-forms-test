@@ -31,7 +31,7 @@ export class CvaParentFormComponent implements OnInit, ControlValueAccessor, Val
 
   constructor(private changeDetect: ChangeDetectorRef) {
     this.parentForm = new FormGroup({
-      child: new FormControl({ name: 'a', comment: ''})
+      child: new FormControl('')
     });
   }
 
@@ -39,7 +39,8 @@ export class CvaParentFormComponent implements OnInit, ControlValueAccessor, Val
 
   ngAfterViewChecked(): void {
     console.log('after view checked: ', this.parentForm.controls.child.errors);
-    this.parentForm.updateValueAndValidity();
+    // workaround: updating parent status after view is first build
+    // this.parentForm.updateValueAndValidity();
   }
 
   public onTouched: () => void = () => { };
