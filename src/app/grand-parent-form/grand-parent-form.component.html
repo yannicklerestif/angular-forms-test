@@ -1,0 +1,6 @@
+is form valid: {{grandParentFormGroup.valid}}<br>
+value: <pre>{{getFormValueJson()}}</pre>
+<form [formGroup]="grandParentFormGroup">
+  <!-- <app-parent-form></app-parent-form> -->
+  <app-cva-parent-form formControlName="parent"></app-cva-parent-form>
+</form>
