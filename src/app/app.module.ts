@@ -8,6 +8,8 @@ import { ParentFormComponent } from './parent-form/parent-form.component';
 import { CvaChildFormComponent } from './cva-child-form/cva-child-form.component';
 import { GrandParentFormComponent } from './grand-parent-form/grand-parent-form.component';
 import { CvaParentFormComponent } from './cva-parent-form/cva-parent-form.component';
+import { CvaSimpleChildComponent } from './cva-simple-child/cva-simple-child.component';
+import { CvaSimpleParentComponent } from './cva-simple-parent/cva-simple-parent.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +17,12 @@ import { CvaParentFormComponent } from './cva-parent-form/cva-parent-form.compon
     ParentFormComponent,
     CvaChildFormComponent,
     GrandParentFormComponent,
-    CvaParentFormComponent
+    CvaParentFormComponent,
+    CvaSimpleChildComponent,
+    CvaSimpleParentComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,7 @@
+<h1>This Is a Simple Parent Form</h1>
+is form valid: {{ parentFormGroup.valid }}<br />
+value:
+<pre>{{ getFormValueJson() }}</pre>
+<form [formGroup]="parentFormGroup">
+  <app-cva-simple-child formControlName="child"></app-cva-simple-child>
+</form>
